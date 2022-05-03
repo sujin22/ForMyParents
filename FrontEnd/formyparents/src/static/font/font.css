@@ -10,8 +10,8 @@
        IE6-IE8 => eot
     */
     src: 
-    url("./BM-HANNA.ttf") format("truetype"), 
-    url("./BM-HANNA.eot?iefix") format("embedded-opentype");
+    url("./BM-HANNA.ttf") format("truetype");
+    /* url("./BM-HANNA.eot?iefix") format("embedded-opentype"); */
   
     /* 사용할 폰트의 기본 스타일 */
     font-weight: 400;
@@ -23,8 +23,8 @@
     font-display: fallback;
   
     src:   
-    url("./Kyobo-Handwriting.ttf") format("truetype"), 
-    url("./Kyobo-Handwriting.eot?iefix") format("embedded-opentype");
+    url("./Kyobo-Handwriting.ttf") format("truetype");
+    /* url("./Kyobo-Handwriting.eot?iefix") format("embedded-opentype"); */
   
     font-weight: 400;
     font-style: normal;
