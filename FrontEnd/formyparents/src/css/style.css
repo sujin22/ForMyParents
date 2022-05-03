@@ -22,7 +22,7 @@
   }
 
   .button {
-    background-color: white !important;
+    background-color: white;
     color: black!important;
     border: none !important;
     border-radius: 15px;

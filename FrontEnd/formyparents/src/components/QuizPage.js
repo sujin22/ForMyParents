@@ -86,7 +86,9 @@ class QuizPage extends React.Component{
         SN: 0,
         TF: 0,
         JP: 0,
-        isFinished: false
+        isFinished: false,
+        bgColor1: "",
+        bgColor2: ""
     };
 
     chooseUp = () => {
@@ -115,9 +117,24 @@ class QuizPage extends React.Component{
         console.log("mbtiType? "+ mbtiTypeUse);
         console.log("isFinished: "+ isFinished);
       };
+      onMouseDown =(num) =>{
+          if(num == 1)  this.setState({bgColor1: "#FFC28A"});
+          else this.setState({bgColor2: "#FFC28A"});
+      }
+
+      onMouseUp = (num) =>{
+        if(num == 1){
+            this.setState({bgColor1: "white"});
+            this.chooseUp();
+        }else {
+            this.setState({bgColor2: "white"});
+            this.chooseDown();
+        }
+      }
     
     chooseDown = () => {
         const { quizNum, quizData, isFinished } = this.state;
+        
         this.setState({quizNum: quizNum+1});
         this.setState({isFinished: quizNum-1===quizData.length});
         console.log("isFinished: "+ isFinished);
@@ -156,10 +173,18 @@ class QuizPage extends React.Component{
                 {quizData[quizNum-1].quiz}
                 </h2>
                 <div className="questionButtons">
-                    <button onClick={this.chooseUp} className="button">
+                    <button className="button"
+                        // onClick={this.chooseUp} 
+                        onTouchStart={()=>this.onMouseDown(1)}
+                        onTouchEnd={()=>this.onMouseUp(1)}
+                        style={{backgroundColor: this.state.bgColor1}}>
                         {quizData[quizNum-1].answer1}
                     </button>
-                    <button onClick={this.chooseDown} className="button">
+                    <button className="button"
+                        // onClick={this.chooseDown} 
+                        onTouchStart={()=>this.onMouseDown(2)}
+                        onTouchEnd={()=>this.onMouseUp(2)}
+                        style={{backgroundColor: this.state.bgColor2}}>
                         {quizData[quizNum-1].answer2}
                     </button>
                 </div>
