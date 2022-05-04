@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
+import {isMobile} from "react-device-detect";
 import '../css/style.css';
 import styled from "styled-components";
 
@@ -175,6 +176,8 @@ class QuizPage extends React.Component{
                 <div className="questionButtons">
                     <button className="button"
                         // onClick={this.chooseUp} 
+                        onMouseDown={()=>(isMobile?undefined:this.onMouseDown(1))}
+                        onMouseUp={()=>(isMobile?undefined:this.onMouseUp(1))}
                         onTouchStart={()=>this.onMouseDown(1)}
                         onTouchEnd={()=>this.onMouseUp(1)}
                         style={{backgroundColor: this.state.bgColor1}}>
@@ -182,6 +185,8 @@ class QuizPage extends React.Component{
                     </button>
                     <button className="button"
                         // onClick={this.chooseDown} 
+                        onMouseDown={()=>(isMobile?undefined:this.onMouseDown(2))}
+                        onMouseUp={()=>(isMobile?undefined:this.onMouseUp(2))}
                         onTouchStart={()=>this.onMouseDown(2)}
                         onTouchEnd={()=>this.onMouseUp(2)}
                         style={{backgroundColor: this.state.bgColor2}}>
