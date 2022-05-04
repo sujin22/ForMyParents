@@ -19,6 +19,29 @@ class ResultPage extends React.Component {
         title: '클립보드에 저장되었습니다!'
       })
     }
+
+    const shareKakao = () => {
+      window.Kakao.Link.sendDefault({
+        objectType: "feed",
+          content: {
+            title: "어버이날 선물 뭐하지?",
+            description: "평소 부모님의 모습으로 알아보는 어버이날 맞춤 선물!",
+            imageUrl: 'https://formyparents.site/thumbnail.png',
+            link: {
+              mobileWebUrl: "formyparents.site",
+            },
+          },
+          buttons: [
+            {
+              title: "테스트하러 가기!",
+              link: {
+                mobileWebUrl: "https://formyparents.site",
+              },
+            },
+          ],
+      });
+    }
+    
     return (
       <article className="result container">
         <Link to="/" style={{ textDecoration: 'none' }}>
@@ -46,7 +69,7 @@ class ResultPage extends React.Component {
             </svg>
             <span>링크공유</span>
           </button>
-          <button className='sharing-button kakao'>
+          <button className='sharing-button kakao'  onClick={shareKakao}>
             <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="20.5" cy="20.5" r="20.5" fill="#FEE500"/>
             <path d="M20.6025 9.84C13.5263 9.84 7.78998 14.346 7.78998 19.9044C7.78998 23.498 10.1881 26.6512 13.7956 28.4318C13.5993 29.1061 12.5344 32.7698 12.492 33.0576C12.492 33.0576 12.4665 33.2739 12.6071 33.3563C12.7477 33.4388 12.913 33.3747 12.913 33.3747C13.3161 33.3187 17.5875 30.3295 18.3268 29.8105C19.0653 29.9147 19.8258 29.9688 20.6025 29.9688C27.6787 29.9688 33.415 25.4629 33.415 19.9044C33.415 14.346 27.6787 9.84 20.6025 9.84Z" fill="black" fillOpacity="0.9"/>
