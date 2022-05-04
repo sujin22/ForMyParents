@@ -22,7 +22,9 @@ class App extends React.Component {
 }
 
 const Container = styled.div`
-  min-height: 844px;
+  position:absolute;
+  width:100%;
+  height:100%;
   background-color:#FFF4EB;
 `;
 

@@ -1,4 +1,6 @@
-
+  article{
+    background-color:#FFF4EB;
+  }
   .progressLabel{
     padding-top: 30px;
     font-family: "Kyobo";
@@ -49,7 +51,11 @@
     font-family: "BM-HANNA";
     font-size: 40px;
     line-height: 1.1;
+    width: fit-content;
     margin-bottom: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
   }
   .rending .subtitle{
     font-size: 18px;
@@ -98,4 +104,14 @@
   }
   .rending .sharing-button span{
       margin-left: 10px;
+  }
+
+  .rending .gift-img{
+    opacity: 20%;
+    position: absolute;
+    width: 155.49px;
+    height: 176.62px;
+    left: -30%;
+    top: -70%;
+    transform: rotate(-18.53deg);
   }
