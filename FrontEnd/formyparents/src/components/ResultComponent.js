@@ -20,13 +20,13 @@ function ResultComponent() {
     var mbti = "";
     var storage = JSON.parse(window.localStorage.getItem('resultData'));
 
-    if(storage['EI'] <  2) mbti = 'e';
+    if(storage['EI'] >=  2) mbti = 'e';
     else mbti = 'i';
-    if(storage['SN'] <  2) mbti += 's';
+    if(storage['SN'] >=  2) mbti += 's';
     else mbti += 'n';
-    if(storage['TF'] <  2) mbti += 't';
+    if(storage['TF'] >=  2) mbti += 't';
     else mbti += 'f';
-    if(storage['JP'] <  2) mbti += 'j';
+    if(storage['JP'] >=  2) mbti += 'j';
     else mbti += 'p';
 
     if(mbti == "enfj"){
