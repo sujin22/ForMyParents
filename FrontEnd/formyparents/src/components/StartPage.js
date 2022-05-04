@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 import giftImg from '../static/img/purr-gift-with-bow.png';
-import { infeedProps } from './GoogleAdvertise';
-import {GoogleAdvertise} from './GoogleAdvertise';
 
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'

@@ -1,9 +1,11 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import ResultComponent from './ResultComponent';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import 'sweetalert2/src/sweetalert2.scss'
 
 class ResultPage extends React.Component {
+  
   render() {
     const Toast = Swal.mixin({
       toast: true,
@@ -41,9 +43,10 @@ class ResultPage extends React.Component {
           ],
       });
     }
-    
+
     return (
       <article className="result container">
+        <ResultComponent></ResultComponent>
         <Link to="/" style={{ textDecoration: 'none' }}>
           <button className="button-retry">
             다시 테스트 하기

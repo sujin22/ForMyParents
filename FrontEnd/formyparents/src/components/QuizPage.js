@@ -115,8 +115,6 @@ class QuizPage extends React.Component{
         this.setState({quizNum: quizNum+1});
         this.setState({isFinished: quizNum-1===quizData.length});
 
-        console.log("mbtiType? "+ mbtiTypeUse);
-        console.log("isFinished: "+ isFinished);
       };
       onMouseDown =(num) =>{
           if(num == 1)  this.setState({bgColor1: "#FFC28A"});
@@ -138,7 +136,6 @@ class QuizPage extends React.Component{
         
         this.setState({quizNum: quizNum+1});
         this.setState({isFinished: quizNum-1===quizData.length});
-        console.log("isFinished: "+ isFinished);
     };
     
 
@@ -147,13 +144,6 @@ class QuizPage extends React.Component{
         const totalQuestionCnt = quizData.length;
         const progress = (quizNum/totalQuestionCnt) * 100;
         const isFinished = quizNum-1 === totalQuestionCnt;
-        
-        console.log("QuizNum: "+quizNum);
-        console.log("EI"+ EI);
-        console.log("SN"+ SN);
-        console.log("TF"+ TF);
-        console.log("JP"+ JP);
-        console.log("isFinished: "+ isFinished);
 
         if(isFinished){
             window.localStorage.setItem('resultData', JSON.stringify(this.state));
