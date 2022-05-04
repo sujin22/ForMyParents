@@ -6,6 +6,8 @@ import './css/style.css';
 import styled from "styled-components";
 
 
+window.Kakao.init("b086a2fac8b04c9ca9eef320ae15205d");
+
 class App extends React.Component {
   render() {
     return(
