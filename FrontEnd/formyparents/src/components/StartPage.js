@@ -56,6 +56,11 @@ function StartPage(history) {
           </button>
         </div>
       </div>
+      <div className='footer'>
+        <p>광고 및 후원 문의</p>
+        <p className='info'>numva.201@gmail.com</p>
+        <p className='info'>© 2022 Egong-il. All Rights Reserved.</p>
+      </div>
     </article>
   );
 }
