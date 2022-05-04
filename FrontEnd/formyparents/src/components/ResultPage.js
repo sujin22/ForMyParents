@@ -1,8 +1,24 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+import 'sweetalert2/src/sweetalert2.scss'
 
 class ResultPage extends React.Component {
   render() {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-middle',
+      showConfirmButton: false,
+      timer: 2000
+    })
+  
+    const copyLink = ()=>{
+      navigator.clipboard.writeText("https://formyparents.site");
+      Toast.fire({
+        icon: 'success',
+        title: '클립보드에 저장되었습니다!'
+      })
+    }
     return (
       <article className="result container">
         <Link to="/" style={{ textDecoration: 'none' }}>
@@ -16,7 +32,7 @@ class ResultPage extends React.Component {
           친구에게 공유하기
         </p>
         <div className='sharing-buttons'>
-          <button className='sharing-button link'>
+          <button className='sharing-button link'  onClick={() => copyLink()}>
           <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="20" cy="20" r="20" fill="#BB9B72"/>
             <g clipPath="url(#clip0_15_86)">
