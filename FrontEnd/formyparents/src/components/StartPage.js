@@ -1,10 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import giftImg from '../static/img/purr-gift-with-bow.png';
+import { infeedProps } from './GoogleAdvertise';
+import {GoogleAdvertise} from './GoogleAdvertise';
 
 function StartPage(history) {
   return (
     <article className="rending container">
+      {/* <GoogleAdvertise 
+        {...infeedProps}
+      /> */}
       <div className='title'>
         <img className="gift-img" src={giftImg} />
         어버이날<br></br>
