@@ -1,6 +1,6 @@
 
   .progressLabel{
-    margin-top: 30px;
+    padding-top: 30px;
     font-family: "Kyobo";
     font-size: 14px;
     text-align: right;
@@ -10,7 +10,7 @@
     font-family: "BM-HANNA";
     font-size: 24px;
     text-align: left;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
   }
 
   .question{
@@ -27,7 +27,7 @@
     border: none !important;
     border-radius: 15px;
     padding: 20px 20px;
-    box-shadow: 5px 5px 5px #DDDDDD;
+    box-shadow: inset -2px -4px 4px rgba(0, 0, 0, 0.25);
     font-family: "Kyobo";
     font-size: 18px;
     text-align: center;
@@ -36,4 +36,66 @@
     margin-top: 3%;
     width: 100%;
     height: 125px;
+  }
+
+  .rending{
+    padding-top: 100px;
+    padding-bottom: 50px;
+    font-family: "Kyobo";
+    font-size: 24px;
+    text-align: center;
+  }
+  .rending .title{
+    font-family: "BM-HANNA";
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+  .rending .subtitle{
+    font-size: 18px;
+  }
+  .rending .main{
+    margin: 50px 0;
+  }
+  .rending .button{
+    box-shadow: inset -2px -4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    width: 60%;
+    margin: 50px auto;
+    font-size: 24px;
+  }
+  .rending .button p{
+    margin-bottom: 0px;
+  }
+  .rending .button-sub{
+    font-size: 16px;
+    color:#DC8534;
+  }
+  .rending .sharing{
+    padding-top: 30px;
+  }
+  .rending .sharing-title{
+    font-family: "BM-HANNA";
+    line-height: 1;
+  }
+  .rending .sharing-title span{
+    font-size: 16px;
+  }
+  .rending .sharing-button{
+    box-shadow: inset -2px -4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    padding: 15px;
+    border: none;
+    margin:0 5px;
+  }
+  .rending .sharing-button.link{
+    background-color: #F8EAD9;
+  }
+  .rending .sharing-button.kakao{
+    background-color: #FFF7A9;
+  }
+  .rending .sharing-button span{
+      margin-left: 10px;
   }
