@@ -6,7 +6,7 @@ import './css/style.css';
 import styled from "styled-components";
 
 
-window.Kakao.init("b086a2fac8b04c9ca9eef320ae15205d");
+window.Kakao.init(process.env.REACT_APP_KAKAO);
 
 class App extends React.Component {
   render() {
