@@ -24,19 +24,18 @@ const shareKakao = () => {
   window.Kakao.Link.sendDefault({
     objectType: "feed",
       content: {
-        title: "themeData.title",
-        description: "내용!",
+        title: "어버이날 선물 뭐하지?",
+        description: "평소 부모님의 모습으로 알아보는 어버이날 맞춤 선물!",
         imageUrl: 'https://formyparents.site/thumbnail.png',
         link: {
-          mobileWebUrl: "모바일 url!",
-          androidExecParams: "test",
+          mobileWebUrl: "formyparents.site",
         },
       },
       buttons: [
         {
-          title: "웹으로 이동",
+          title: "테스트하러 가기!",
           link: {
-            mobileWebUrl: "공유할 url!",
+            mobileWebUrl: "https://formyparents.site",
           },
         },
       ],
